@@ -1,0 +1,963 @@
+{
+  "last_node_id": 26,
+  "last_link_id": 30,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "PreviewImage",
+      "pos": [
+        1063.2746887207031,
+        291.2944793701172
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 4,
+      "type": "XY Plot",
+      "pos": [
+        96,
+        838
+      ],
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "dependencies",
+          "type": "DEPENDENCIES",
+          "link": 12,
+          "label": "依赖"
+        },
+        {
+          "name": "X",
+          "type": "XY",
+          "link": 24,
+          "slot_index": 1,
+          "label": "X"
+        },
+        {
+          "name": "Y",
+          "type": "XY",
+          "link": 25,
+          "slot_index": 2,
+          "label": "Y"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SCRIPT",
+          "type": "SCRIPT",
+          "links": [
+            7
+          ],
+          "shape": 3,
+          "label": "脚本"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Plot"
+      },
+      "widgets_values": [
+        0,
+        "False",
+        "Horizontal",
+        "True",
+        "Images"
+      ],
+      "color": "#332233",
+      "bgcolor": "#553355",
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -647,
+        930
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "label": "LoRA堆"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            26
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "自建\\haiyan\\haiyan-000006.safetensors",
+        0.7000000000000001,
+        1,
+        "Off",
+        "国漫\\meidusha_nianfan_v1.safetensors",
+        0.7000000000000001,
+        1,
+        "Off",
+        "国漫\\yunyun2-000004.safetensors",
+        0.7000000000000001,
+        1
+      ]
+    },
+    {
+      "id": 23,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -661,
+        1304
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "label": "LoRA堆"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            27
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "自建\\haiyan\\haiyan-000008.safetensors",
+        0.7000000000000001,
+        1,
+        "Off",
+        "None",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 24,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -272,
+        1104
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "label": "LoRA堆"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            28
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "自建\\haiyan\\haiyan-000010.safetensors",
+        0.7000000000000001,
+        1,
+        "Off",
+        "None",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 21,
+      "type": "XY Input: LoRA Stacks",
+      "pos": [
+        -257,
+        878
+      ],
+      "size": {
+        "0": 315,
+        "1": 138
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack_1",
+          "type": "LORA_STACK",
+          "link": 26,
+          "label": "LoRA堆1",
+          "slot_index": 0
+        },
+        {
+          "name": "lora_stack_2",
+          "type": "LORA_STACK",
+          "link": 27,
+          "label": "LoRA堆2",
+          "slot_index": 1
+        },
+        {
+          "name": "lora_stack_3",
+          "type": "LORA_STACK",
+          "link": 28,
+          "label": "LoRA堆3",
+          "slot_index": 2
+        },
+        {
+          "name": "lora_stack_4",
+          "type": "LORA_STACK",
+          "link": 29,
+          "label": "LoRA堆4",
+          "slot_index": 3
+        },
+        {
+          "name": "lora_stack_5",
+          "type": "LORA_STACK",
+          "link": 30,
+          "label": "LoRA堆5"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            25
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: LoRA Stacks"
+      },
+      "widgets_values": [
+        "Enabled"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "CR LoRA Stack",
+      "pos": [
+        79,
+        1095
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "label": "LoRA堆"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            29
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "自建\\haiyan\\haiyan-000012.safetensors",
+        0.7000000000000001,
+        1,
+        "Off",
+        "None",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 26,
+      "type": "CR LoRA Stack",
+      "pos": [
+        435,
+        1086
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "label": "LoRA堆"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            30
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "自建\\haiyan\\haiyan.safetensors",
+        0.7000000000000001,
+        1,
+        "Off",
+        "None",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 20,
+      "type": "XY Input: Checkpoint",
+      "pos": [
+        -993,
+        848
+      ],
+      "size": {
+        "0": 315,
+        "1": 3802
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            24
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: Checkpoint"
+      },
+      "widgets_values": [
+        "Base",
+        "Ckpt Names+ClipSkip+VAE",
+        "G:\\example_folder",
+        false,
+        "ascending",
+        5,
+        5,
+        "写实\\花生酱25D人像模型_v1.0.ckpt",
+        -2,
+        "vae-ft-mse-840000-ema-pruned.ckpt",
+        "写实\\极氪写实MAX-白白酱_V6.safetensors",
+        -2,
+        "vae-ft-mse-840000-ema-pruned.ckpt",
+        "二次元\\creammix_v10.safetensors",
+        -2,
+        "vae-ft-mse-840000-ema-pruned.ckpt",
+        "写实\\majicMIX realistic 麦橘写实_v6.safetensors",
+        -2,
+        "vae-ft-mse-840000-ema-pruned.ckpt",
+        "写实\\墨幽人造人_v1060.safetensors",
+        -2,
+        "vae-ft-mse-840000-ema-pruned.ckpt",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE",
+        "None",
+        -1,
+        "Baked VAE"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        618,
+        152
+      ],
+      "size": {
+        "0": 353.2640380859375,
+        "1": 562
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 2,
+          "label": "正面提示词"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 3,
+          "label": "负面提示词"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 4,
+          "label": "Latent"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": 5,
+          "label": "VAE"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": 7,
+          "label": "脚本",
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "模型"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "正面条件"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "负面条件"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "Latent",
+          "slot_index": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 5
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        -1,
+        null,
+        25,
+        6,
+        "dpmpp_2m",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#332222",
+      "bgcolor": "#553333",
+      "shape": 1
+    },
+    {
+      "id": 1,
+      "type": "Efficient Loader",
+      "pos": [
+        48,
+        110
+      ],
+      "size": {
+        "0": 407.8690490722656,
+        "1": 639.8418579101562
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "label": "LoRA堆"
+        },
+        {
+          "name": "cnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "link": null,
+          "label": "ControlNet堆"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "shape": 3,
+          "label": "模型",
+          "slot_index": 0
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": [
+            2
+          ],
+          "shape": 3,
+          "label": "正面条件",
+          "slot_index": 1
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "label": "负面条件",
+          "slot_index": 2
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "label": "Latent",
+          "slot_index": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "label": "VAE",
+          "slot_index": 4
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null,
+          "shape": 3,
+          "label": "CLIP"
+        },
+        {
+          "name": "DEPENDENCIES",
+          "type": "DEPENDENCIES",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "label": "依赖",
+          "slot_index": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Efficient Loader"
+      },
+      "widgets_values": [
+        "写实\\花生酱25D人像模型_v1.0.ckpt",
+        "vae-ft-mse-840000-ema-pruned.ckpt",
+        -2,
+        "国漫\\huolinger_v10.safetensors",
+        0.7000000000000001,
+        0.7000000000000001,
+        "haiyan, 1girl,weddingdress,beach,blue sky and white clouds,Very detailed,reasonable design,Clear lines,High sharpness,best quality,masterpiece,4K,perfect ratio,(shiny_skin:1.1),game cg,(perfect hand:1.1),Electroluminescent Wire,Dreamy Glow,conceptual digital art,(nsfw),hanging breasts,feet",
+        "embedding:badhandv4, embedding:EasyNegative, embedding:nsfwEM, ",
+        "none",
+        "comfy",
+        512,
+        768,
+        1
+      ],
+      "color": "#332233",
+      "bgcolor": "#553355",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      1,
+      1,
+      2,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      3,
+      1,
+      2,
+      2,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      1,
+      3,
+      2,
+      3,
+      "LATENT"
+    ],
+    [
+      5,
+      1,
+      4,
+      2,
+      4,
+      "VAE"
+    ],
+    [
+      6,
+      2,
+      5,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      4,
+      0,
+      2,
+      5,
+      "SCRIPT"
+    ],
+    [
+      12,
+      1,
+      6,
+      4,
+      0,
+      "DEPENDENCIES"
+    ],
+    [
+      24,
+      20,
+      0,
+      4,
+      1,
+      "XY"
+    ],
+    [
+      25,
+      21,
+      0,
+      4,
+      2,
+      "XY"
+    ],
+    [
+      26,
+      22,
+      0,
+      21,
+      0,
+      "LORA_STACK"
+    ],
+    [
+      27,
+      23,
+      0,
+      21,
+      1,
+      "LORA_STACK"
+    ],
+    [
+      28,
+      24,
+      0,
+      21,
+      2,
+      "LORA_STACK"
+    ],
+    [
+      29,
+      25,
+      0,
+      21,
+      3,
+      "LORA_STACK"
+    ],
+    [
+      30,
+      26,
+      0,
+      21,
+      4,
+      "LORA_STACK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
